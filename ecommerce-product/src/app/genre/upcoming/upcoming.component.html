@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row p-3 shadow-lg p-3 " >
+        <div class="col-xl-4 p-5"
+         *ngFor="let i of upcomingmovies, index as x" 
+         style = "font-family: Graduate; text-shadow: 0.5em; color: #CD9FE1;"
+         >
+         
+            <div class="fade-in-image">
+                
+                <img src="{{image[x]}}"  class="img-fluid rounded"  style="cursor: pointer; " alt="Responsive image"
+                routerLink="/singlemovie/{{i.id}}">
+            <h4 class="d-flex justify-content-center p-2" style="font-size: 25px;" >{{i.title}}</h4>   
+            <p class="d-flex justify-content-center" style="font-size:20px">Rating: {{i.vote_average}} ⭐</p> 
+            </div>
+        </div>
+    </div> 
+</div>
+

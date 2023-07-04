@@ -1,0 +1,21 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination" >
+      <li class="page-item"><a class="page-link" href="#"> << </a></li>
+      <li class="page-item" 
+      *ngFor="let j of urlArray; let i=index"
+      (click) = "pageClicked($event)"
+      >
+        <a class="page-link" 
+          href="/page">
+          {{i}}</a>
+        
+      </li>
+      
+      <li class="page-item"><a class="page-link" href="#"> >> </a></li>
+
+    </ul>
+
+    <p *ngIf="status" style="color: aliceblue; font-size: large;">
+      {{arr1}}
+    </p>
+  </nav>

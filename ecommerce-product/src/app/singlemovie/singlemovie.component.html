@@ -1,0 +1,131 @@
+<!-- <div class="container-sm" >
+    <div class="row">
+        <div class="col p-3">
+            <div class="clearfix">
+                <img src="{{image}}" class="col-md-6 float-md-end mb-3 ms-md-3"  alt="">
+                <h2>{{sMovie.original_title}}</h2>
+                <h3>Overview</h3>
+                <p>{{sMovie.overview}}</p>             
+            </div>    
+        </div>
+</div> -->
+
+
+<div class="container">
+    <div class="row" style=" color: azure;">
+
+        <h1 class="p-3"> {{sMovie.original_title}} </h1>
+        <h4 class="p-3 fw-light "> {{sMovie.release_date}} | 
+            {{sMovie.runtime}} m
+        </h4> 
+        
+       
+        <div class="col">
+            
+            <div class="card" style="font-family: Lexend Deca; background-color: rgb(44, 8, 50);">
+
+                <div class="card-body ">
+                
+                <div class="row"
+                style="color: antiquewhite;">
+                    
+                
+                <img class="col-md-6 p-3" src="{{image}}"  style="width:25%; height:50%"  alt="">   
+                       
+                <!-- <div class ="row d-flex justify-content-start">
+                    <p class="col p-1">  {{genres[0].name}}</p>
+                    <p class="col p-1">  {{genres[1].name}}</p>
+                    <p class="col p-1">  {{genres[2].name}}</p>
+                </div> -->
+                <div class="col pt-5 mt-0 d-flex justify-content-start">
+                    
+                    <div>
+                        
+                        <span  class="border border-warning p-2 rounded">
+                        {{genres[0].name}}
+                        </span>
+                        
+                        <span  class="border border-warning p-2 ms-2 rounded">
+                            {{genres[1].name}}
+                        </span>
+                        <span  class="border border-warning p-2 ms-2  rounded">
+                            {{genres[2].name}}
+                        </span>
+
+                        
+
+                        <h3 class="mt-0 pt-4">Overview</h3>
+                            <p>
+                            {{sMovie.overview}} 
+                        </p> 
+                    </div>
+                
+                        
+                        
+                                               
+                        
+                    
+
+<!--                     
+                        <h3>Overview</h3>
+                        <p>
+                        {{sMovie.overview}} 
+                        </p> -->
+                    
+                </div>            
+                 
+                
+                </div>
+                 <!-- <img src="{{image_1}}"  style="width:500px; height:600px"  alt=""> -->
+                 <!-- <img src="{{bckg_image}}" class="col-md-6" alt="" style="width:150px; height:90px"> -->
+              
+                 
+               
+                
+                 
+                             
+                
+            </div>
+            </div>
+            
+            
+                
+                
+            
+        </div>
+        
+       
+    </div>
+
+    <div style="color: antiquewhite;" >
+
+        <h2>Cast</h2>
+
+            
+        <ul
+        class ="list-group list-group-horizontal
+            position-relative overflow-auto w-60
+            flex-fill" 
+        >
+            <li
+            
+             *ngFor="let ans of profile_img" 
+             style="list-style-type: none;">
+              <div
+              >
+                <img 
+                class="img-fluid"     
+                
+                 
+                src="{{ans}}" alt="">
+              </div>
+                
+            </li>
+        </ul>
+       
+       
+            <!-- <img src="{{profile_img[1]}}" alt=""> -->
+            
+        
+    </div>
+</div>

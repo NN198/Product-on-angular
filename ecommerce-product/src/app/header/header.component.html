@@ -1,0 +1,51 @@
+
+<nav class="p-3 mb-2 navbar navbar-expand-lg  navbar-dark bg-dark shadow-lg p-3 mb-5">
+    <div class="container-fluid">
+      <a class="navbar-brand mb-2" style="font-family: Permanent Marker; font-size: 30px;"> Movie Buff </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse justify-content-center navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav  mb-2 mb-lg-0 " >
+          <li class="nav-item">
+            <a style="font-family: Permanent Marker; font-size: 30px;" class="nav-link active px-4" aria-current="page" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family: Permanent Marker; font-size: 30px;" class="nav-link active px-4" aria-current="page" routerLink="/top">Top-Rated</a>
+          </li>
+          <li class="nav-item">
+            <a style="font-family: Permanent Marker; font-size: 30px;" class="nav-link active px-4" aria-current="page" routerLink="/upcoming">Upcoming</a>
+          </li>
+        
+          <li class="nav-item dropdown ">
+            <a  style="font-family: Permanent Marker; font-size: 30px;" class="nav-link dropdown-toggle px-4"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genre
+            </a>
+            <ul  style="font-family: Permanent Marker; font-size: 30px;" class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/page">Action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="/">Comedy</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" routerLink="/">Thriller</a></li>
+              
+            </ul>
+        
+          
+        </ul>
+        
+   
+      
+      </div>
+
+      <form class="d-flex" role="search">
+
+        <input
+          #searchInput
+          (keyup) = "searchMovies($event)" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button 
+          (click) = "submitSearch(searchInput.value)"
+          class="btn btn-outline-success" type="submit">
+          Search</button>
+      </form>
+    </div>
+  </nav>
